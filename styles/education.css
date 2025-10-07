@@ -1,0 +1,415 @@
+/* ========================
+   EDUCATION PAGE STYLES
+   ======================== */
+
+/* Page Header */
+.page-header {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 100px;
+    background: 
+        radial-gradient(circle at 30% 30%, rgba(108, 99, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(78, 236, 196, 0.15) 0%, transparent 50%);
+}
+
+.header-content {
+    text-align: center;
+    z-index: 2;
+}
+
+.page-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.page-subtitle {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease 0.2s forwards;
+}
+
+.header-decoration {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, var(--dark-bg));
+}
+
+/* Education Timeline */
+.education-timeline {
+    padding: var(--spacing-lg) 0;
+    min-height: auto;
+}
+
+.section-description {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    opacity: 0;
+}
+
+.section-description[data-animate].animate-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 4rem auto 0;
+    padding-left: 50px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--gradient-1);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.timeline-item[data-animate].animate-in {
+    animation: slideInLeft 0.8s ease forwards;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -30px;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--dark-bg);
+    border: 3px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.timeline-marker.current {
+    border-color: var(--secondary-color);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.marker-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--primary-color);
+}
+
+.timeline-marker.current .marker-dot {
+    background: var(--secondary-color);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.timeline-content {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition-normal);
+    margin-left: 20px;
+}
+
+.timeline-content:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(10px);
+    box-shadow: 0 10px 30px rgba(108, 99, 255, 0.3);
+}
+
+.timeline-badge {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: var(--gradient-1);
+    color: var(--text-primary);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.timeline-item:first-child .timeline-badge {
+    background: var(--gradient-2);
+}
+
+.timeline-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.timeline-content h4 {
+    font-size: 1.3rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.institution {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.duration {
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.details {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.details p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.highlights {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.highlight-tag {
+    padding: 0.5rem 1rem;
+    background: rgba(108, 99, 255, 0.2);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    border: 1px solid rgba(108, 99, 255, 0.3);
+}
+
+/* Courses Section */
+.courses-section {
+    background: rgba(255, 255, 255, 0.02);
+    padding: var(--spacing-lg) 0;
+    min-height: auto;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.course-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: var(--transition-normal);
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.course-card[data-animate].animate-in {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(108, 99, 255, 0.3);
+    border-color: var(--primary-color);
+}
+
+.course-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.course-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.course-card p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Academic Stats */
+.academic-stats {
+    padding: var(--spacing-lg) 0;
+    min-height: auto;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.stat-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.stat-box[data-animate].animate-in {
+    animation: fadeIn 0.6s ease forwards, pulse 0.6s ease forwards;
+}
+
+.stat-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-1);
+    opacity: 0;
+    transition: var(--transition-normal);
+}
+
+.stat-box:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(108, 99, 255, 0.4);
+}
+
+.stat-box:hover::before {
+    opacity: 0.1;
+}
+
+.stat-box:nth-child(2)::before {
+    background: var(--gradient-2);
+}
+
+.stat-box:nth-child(3)::before {
+    background: var(--gradient-3);
+}
+
+.stat-box:nth-child(4)::before {
+    background: var(--gradient-4);
+}
+
+.stat-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.stat-value {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    position: relative;
+}
+
+/* Animations */
+[data-animate] {
+    opacity: 0;
+}
+
+[data-animate].animate-in {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .page-title {
+        font-size: 3rem;
+    }
+
+    .courses-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .timeline {
+        padding-left: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+
+    .page-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .courses-grid,
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline {
+        padding-left: 30px;
+    }
+
+    .timeline::before {
+        left: 15px;
+    }
+
+    .timeline-marker {
+        left: -22px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .marker-dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .timeline-content {
+        padding: 1.5rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .timeline-content h4 {
+        font-size: 1.1rem;
+    }
+}

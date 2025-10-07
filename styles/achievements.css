@@ -1,0 +1,357 @@
+/* ========================
+   ACHIEVEMENTS PAGE STYLES
+   ======================== */
+
+.page-header {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 100px;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 215, 0, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(255, 101, 132, 0.15) 0%, transparent 50%);
+}
+
+.header-content {
+    text-align: center;
+    z-index: 2;
+}
+
+.page-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.page-subtitle {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease 0.2s forwards;
+}
+
+.header-decoration {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, var(--dark-bg));
+}
+
+/* Academic Achievements */
+.academic-achievements {
+    padding: var(--spacing-lg) 0;
+    min-height: auto;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.achievement-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    transition: var(--transition-normal);
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.achievement-card[data-animate].animate-in {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.achievement-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 50px rgba(255, 215, 0, 0.3);
+    border-color: #FFD700;
+}
+
+.achievement-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.achievement-badge {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: var(--gradient-5);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.achievement-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.achievement-card p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.achievement-year {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 215, 0, 0.2);
+    border-radius: 10px;
+    color: #FFD700;
+    font-weight: 600;
+}
+
+/* Technical Achievements */
+.technical-achievements {
+    background: rgba(255, 255, 255, 0.02);
+    padding: var(--spacing-lg) 0;
+    min-height: auto;
+}
+
+.tech-achievements-list {
+    max-width: 900px;
+    margin: 3rem auto 0;
+}
+
+.tech-achievement {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
+    transition: var(--transition-normal);
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.tech-achievement[data-animate].animate-in {
+    animation: slideInLeft 0.8s ease forwards;
+}
+
+.tech-achievement:hover {
+    transform: translateX(10px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px rgba(108, 99, 255, 0.3);
+}
+
+.achievement-number {
+    font-size: 3rem;
+    font-weight: bold;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    flex-shrink: 0;
+}
+
+.achievement-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-primary);
+}
+
+.achievement-content p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+/* Certifications Section */
+.certifications-section {
+    padding: var(--spacing-lg) 0;
+    min-height: auto;
+}
+
+.section-note {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    font-style: italic;
+    opacity: 0;
+}
+
+.section-note[data-animate].animate-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.cert-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.cert-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition-normal);
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.cert-card[data-animate].animate-in {
+    animation: fadeIn 0.6s ease forwards, pulse 0.6s ease forwards;
+}
+
+.cert-card:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 40px rgba(78, 236, 196, 0.3);
+}
+
+.cert-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.cert-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.cert-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.cert-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cert-card ul li {
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.cert-card ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* Milestones Section */
+.milestones-section {
+    background: rgba(255, 255, 255, 0.02);
+    padding: var(--spacing-lg) 0;
+    min-height: auto;
+}
+
+.milestones-timeline {
+    max-width: 800px;
+    margin: 3rem auto 0;
+}
+
+.milestone-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
+    transition: var(--transition-normal);
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.milestone-item[data-animate].animate-in {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.milestone-item:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 40px rgba(255, 101, 132, 0.3);
+}
+
+.milestone-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.milestone-item h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.milestone-item p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.milestone-date {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 101, 132, 0.2);
+    border-radius: 10px;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+/* Animations */
+[data-animate] {
+    opacity: 0;
+}
+
+[data-animate].animate-in {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .page-title {
+        font-size: 3rem;
+    }
+
+    .achievements-grid,
+    .cert-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+
+    .page-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .achievement-card,
+    .tech-achievement,
+    .cert-card,
+    .milestone-item {
+        padding: 2rem;
+    }
+
+    .tech-achievement {
+        flex-direction: column;
+        text-align: center;
+    }
+}

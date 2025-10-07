@@ -1,0 +1,265 @@
+/* ========================
+   INTERESTS PAGE STYLES
+   ======================== */
+
+.page-header {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 100px;
+    background: radial-gradient(circle at 30% 30%, rgba(78, 236, 196, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(255, 101, 132, 0.15) 0%, transparent 50%);
+}
+
+.header-content {
+    text-align: center;
+    z-index: 2;
+}
+
+.page-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.page-subtitle {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease 0.2s forwards;
+}
+
+.header-decoration {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, var(--dark-bg));
+}
+
+/* Technical Interests */
+.tech-interests {
+    padding: var(--spacing-lg) 0;
+    min-height: auto;
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.interest-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition-normal);
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.interest-card[data-animate].animate-in {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.interest-card:hover {
+    transform: translateY(-15px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 40px rgba(108, 99, 255, 0.4);
+    border-color: var(--primary-color);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.interest-icon {
+    font-size: 3rem;
+}
+
+.interest-card h3 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+}
+
+.interest-card p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* Hobbies Section */
+.hobbies-section {
+    background: rgba(255, 255, 255, 0.02);
+    padding: var(--spacing-lg) 0;
+    min-height: auto;
+}
+
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.hobby-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: var(--transition-normal);
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.hobby-card[data-animate].animate-in {
+    animation: fadeIn 0.6s ease forwards, pulse 0.6s ease forwards;
+}
+
+.hobby-card:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(78, 236, 196, 0.3);
+}
+
+.hobby-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hobby-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.hobby-card p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Exploration Section */
+.exploration-section {
+    padding: var(--spacing-lg) 0;
+    min-height: auto;
+}
+
+.exploration-list {
+    max-width: 900px;
+    margin: 3rem auto 0;
+}
+
+.exploration-item {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
+    transition: var(--transition-normal);
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.exploration-item[data-animate].animate-in {
+    animation: slideInLeft 0.8s ease forwards;
+}
+
+.exploration-item:hover {
+    transform: translateX(10px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 30px rgba(78, 236, 196, 0.3);
+}
+
+.exploration-item .number {
+    font-size: 3rem;
+    font-weight: bold;
+    background: var(--gradient-3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    flex-shrink: 0;
+}
+
+.exploration-item .content h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-primary);
+}
+
+.exploration-item .content p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* Animations */
+[data-animate] {
+    opacity: 0;
+}
+
+[data-animate].animate-in {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .page-title {
+        font-size: 3rem;
+    }
+
+    .interests-grid,
+    .hobbies-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+
+    .page-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .interests-grid,
+    .hobbies-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .interest-card,
+    .hobby-card,
+    .exploration-item {
+        padding: 2rem;
+    }
+
+    .card-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .exploration-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .exploration-item .number {
+        font-size: 2.5rem;
+    }
+}

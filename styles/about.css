@@ -1,0 +1,345 @@
+/* ========================
+   ABOUT PAGE STYLES
+   ======================== */
+
+/* Page Header */
+.page-header {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 100px;
+    background: 
+        radial-gradient(circle at 30% 30%, rgba(108, 99, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(255, 101, 132, 0.15) 0%, transparent 50%);
+}
+
+.header-content {
+    text-align: center;
+    z-index: 2;
+}
+
+.page-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.page-subtitle {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease 0.2s forwards;
+}
+
+.header-decoration {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, var(--dark-bg));
+}
+
+/* About Section */
+.about-section {
+    padding: var(--spacing-lg) 0;
+    min-height: auto;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.about-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition-normal);
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.about-card[data-animate].animate-in {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(108, 99, 255, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+
+.about-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.about-card p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* Personal Details Section */
+.personal-details {
+    background: rgba(255, 255, 255, 0.02);
+    padding: var(--spacing-lg) 0;
+    min-height: auto;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition-normal);
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.detail-item[data-animate].animate-in {
+    animation: slideInLeft 0.6s ease forwards;
+}
+
+.detail-item:hover {
+    transform: translateX(5px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--primary-color);
+}
+
+.detail-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.detail-content h3 {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.3rem;
+}
+
+.detail-content p {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Values Section */
+.values-section {
+    padding: var(--spacing-lg) 0;
+    min-height: auto;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.value-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-normal);
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.value-card[data-animate].animate-in {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.value-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 0;
+    background: var(--gradient-1);
+    transition: var(--transition-slow);
+}
+
+.value-card:hover::before {
+    height: 100%;
+}
+
+.value-card:hover {
+    transform: translateX(10px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.value-card:nth-child(2)::before {
+    background: var(--gradient-2);
+}
+
+.value-card:nth-child(3)::before {
+    background: var(--gradient-3);
+}
+
+.value-card:nth-child(4)::before {
+    background: var(--gradient-4);
+}
+
+.value-number {
+    font-size: 4rem;
+    font-weight: bold;
+    opacity: 0.1;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.value-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.value-card p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+/* CTA Section */
+.cta-section {
+    background: var(--gradient-1);
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+    min-height: auto;
+}
+
+.cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.cta-content[data-animate].animate-in {
+    animation: fadeIn 0.8s ease forwards, pulse 0.8s ease forwards;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.cta-section .btn-primary {
+    background: var(--dark-bg);
+    color: var(--text-primary);
+}
+
+.cta-section .btn-primary:hover {
+    background: rgba(15, 14, 23, 0.8);
+}
+
+.cta-section .btn-secondary {
+    background: transparent;
+    border-color: var(--text-primary);
+}
+
+.cta-section .btn-secondary:hover {
+    background: var(--text-primary);
+    color: var(--dark-bg);
+}
+
+/* Animations */
+[data-animate] {
+    opacity: 0;
+}
+
+[data-animate].animate-in {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .page-title {
+        font-size: 3rem;
+    }
+
+    .about-grid,
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .details-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+
+    .page-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .about-card,
+    .value-card {
+        padding: 2rem;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-item {
+        padding: 1.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+}
