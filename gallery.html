@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - My Portfolio</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/gallery.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">Aryan<span class="highlight">King</span></span>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="interests.html">Interests</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="future-planning.html">Future Plans</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="header-content">
+            <h1 class="page-title" data-animate>My <span class="text-gradient">Gallery</span></h1>
+            <p class="page-subtitle" data-animate>A Visual Journey Through My Life</p>
+        </div>
+        <div class="header-decoration"></div>
+    </section>
+
+    <!-- Gallery Categories -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-filters" data-animate>
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="university">University</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+                <button class="filter-btn" data-filter="achievements">Achievements</button>
+                <button class="filter-btn" data-filter="personal">Personal</button>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Placeholder Gallery Items -->
+                <div class="gallery-item" data-category="university" data-animate>
+                    <div class="gallery-image">
+                        <div class="placeholder-img">
+                            <span class="placeholder-icon">🎓</span>
+                            <p>University Campus</p>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Campus Life</h3>
+                        <p>My university campus</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events" data-animate>
+                    <div class="gallery-image">
+                        <div class="placeholder-img">
+                            <span class="placeholder-icon">🎉</span>
+                            <p>Tech Event</p>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Technical Event</h3>
+                        <p>Participating in tech fest</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="achievements" data-animate>
+                    <div class="gallery-image">
+                        <div class="placeholder-img">
+                            <span class="placeholder-icon">🏆</span>
+                            <p>Achievement</p>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Award Ceremony</h3>
+                        <p>Recognition moment</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="university" data-animate>
+                    <div class="gallery-image">
+                        <div class="placeholder-img">
+                            <span class="placeholder-icon">📚</span>
+                            <p>Study Session</p>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Library</h3>
+                        <p>Study time</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="personal" data-animate>
+                    <div class="gallery-image">
+                        <div class="placeholder-img">
+                            <span class="placeholder-icon">📸</span>
+                            <p>Personal</p>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Memories</h3>
+                        <p>Personal moments</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events" data-animate>
+                    <div class="gallery-image">
+                        <div class="placeholder-img">
+                            <span class="placeholder-icon">👥</span>
+                            <p>Group Activity</p>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Team Event</h3>
+                        <p>Collaboration</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="university" data-animate>
+                    <div class="gallery-image">
+                        <div class="placeholder-img">
+                            <span class="placeholder-icon">💻</span>
+                            <p>Lab Work</p>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Computer Lab</h3>
+                        <p>Practical sessions</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="personal" data-animate>
+                    <div class="gallery-image">
+                        <div class="placeholder-img">
+                            <span class="placeholder-icon">🌟</span>
+                            <p>Special Moment</p>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Milestone</h3>
+                        <p>Important moment</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="achievements" data-animate>
+                    <div class="gallery-image">
+                        <div class="placeholder-img">
+                            <span class="placeholder-icon">🎖️</span>
+                            <p>Recognition</p>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Achievement</h3>
+                        <p>Earned recognition</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Images Note -->
+    <section class="add-images-note">
+        <div class="container">
+            <div class="note-card" data-animate>
+                <div class="note-icon">📷</div>
+                <h2>Add Your Photos Here!</h2>
+                <p>Replace the placeholder images with your own photos. Simply add your images to the <code>images/gallery/</code> folder and update the image sources in this HTML file.</p>
+                <div class="note-tips">
+                    <h3>Tips for great photos:</h3>
+                    <ul>
+                        <li>Use high-quality images (at least 1080p)</li>
+                        <li>Optimize images for web (compress them)</li>
+                        <li>Keep aspect ratio consistent</li>
+                        <li>Add descriptive captions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Aryan Chanpa. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/aryanchanpa" target="_blank" class="social-icon">LinkedIn</a>
+                <a href="https://github.com/aryan13102006" target="_blank" class="social-icon">GitHub</a>
+                <a href="https://instagram.com/aryanchanpa" target="_blank" class="social-icon">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/gallery.js"></script>
+</body>
+</html>
